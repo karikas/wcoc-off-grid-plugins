@@ -1,0 +1,95 @@
+<html>
+<head>
+	<title>OCWC 2018 Plugin Update Request Sneakaroonie</title>
+	<style type="text/css">
+		body {
+			font-family: sans-serif;
+		}
+		form {
+			display: block;
+			margin: 0 0 3em 1em;
+		}
+		label {
+			clear: both;
+			display: block;
+			float: left;
+			width: 5%;
+			margin: .5em 0;
+		}
+		input, select {
+			display: block;
+			margin: .5em 0;
+		}
+		input[type=text], select {
+			width: 95%;
+			float: left;
+		}
+		input [type=submit] {
+			clear: both;
+			float: none;
+		}
+	</style>
+</head>
+
+<body>
+
+<h2>ARR Matey! Update Check - Method 1 (quick-n-dirty)</h2>
+<form method="post" action="http://updates.arrmatey.neutrinoinc.com/">
+	<pre>URL: https://updates.arrmatey.neutrinoinc.com/</pre>
+	<label>action</label>
+	<select name="action">
+		<option>version</option>
+		<option>info</option>
+		<option>license</option>
+	</select>
+	<input type="submit">
+</form>
+
+<h2>ACF 5.0 Pro Update Check</h2>
+<form method="post" action="https://connect.advancedcustomfields.com/v2/plugins/update-check">
+	<pre>URL: https://connect.advancedcustomfields.com/v2/plugins/update-check</pre>
+	<label>plugins</label>
+	<input type="text" name="plugins" value='{"advanced-custom-fields-pro\/acf.php":{"id":"pro","key":false,"slug":"advanced-custom-fields-pro","basename":"advanced-custom-fields-pro\/acf.php","version":"5.6.9"}}'>
+	<label>wp</label>
+	<input type="text" name="wp" value='{"wp_name":"Boston Condos","wp_url":"http:\/\/2017.bostoncondos.dev.cc","wp_version":"4.9.6","wp_language":"en-US","wp_timezone":"America\/New_York"}'>
+	<label>acf</label>
+	<input type="text" name="acf" value='{"acf_version":"5.6.9","acf_pro":true}'>
+	<input type="submit">
+</form>
+
+<h2>WordPress Standard Plugin Update Check</h2>
+<form method="post" action="https://api.wordpress.org/plugins/update-check/1.1/">
+	<pre>URL: https://api.wordpress.org/plugins/update-check/1.1/
+[user-agent] => WordPress/4.4.15; http://www.ocwc2018.dev.cc</pre>
+	<label>plugins</label>
+	<input type="text" name="plugins" value='{"plugins":{"akismet\/akismet.php":{"Name":"Akismet","PluginURI":"http:\/\/akismet.com\/","Version":"3.1.5","Description":"Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam&lt;\/strong&gt;. It keeps your site protected even while you sleep. To get started: 1) Click the \"Activate\" link to the left of this description, 2) <a href="\&quot;http:\/\/akismet.com\/get\/\&quot;">Sign up for an Akismet plan&lt;\/a&gt; to get an API key, and 3) Go to your Akismet configuration page, and save your API key.","Author":"Automattic","AuthorURI":"http:\/\/automattic.com\/wordpress-plugins\/","TextDomain":"akismet","DomainPath":"","Network":false,"Title":"Akismet","AuthorName":"Automattic"},"arrmatey\/arrmatey.php":{"Name":"ARR Matey!","PluginURI":"","Version":"1.0.0","Description":"Make your website piratical by converting the letter R into a seaworthy RRRRRRR.","Author":"Neutrino, Inc.","AuthorURI":"http:\/\/www.neutrinoinc.com\/","TextDomain":"","DomainPath":"","Network":false,"Title":"ARR Matey!","AuthorName":"Neutrino, Inc."},"hello.php":{"Name":"Hello Dolly","PluginURI":"http:\/\/wordpress.org\/plugins\/hello-dolly\/","Version":"1.6","Description":"This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from <cite>Hello, Dolly&lt;\/cite&gt; in the upper right of your admin screen on every page.","Author":"Matt Mullenweg","AuthorURI":"http:\/\/ma.tt\/","TextDomain":"","DomainPath":"","Network":false,"Title":"Hello Dolly","AuthorName":"Matt Mullenweg"},"wordpress-importer\/wordpress-importer.php":{"Name":"WordPress Importer","PluginURI":"https:\/\/wordpress.org\/plugins\/wordpress-importer\/","Version":"0.6.4","Description":"Import posts, pages, comments, custom fields, categories, tags and more from a WordPress export file.","Author":"wordpressdotorg","AuthorURI":"https:\/\/wordpress.org\/","TextDomain":"wordpress-importer","DomainPath":"","Network":false,"Title":"WordPress Importer","AuthorName":"wordpressdotorg"}},"active":["arrmatey\/arrmatey.php","wordpress-importer\/wordpress-importer.php"]}'>
+	<label>translations</label>
+	<input type="text" name="translations" value='[]'>
+	<label>locale</label>
+	<input type="text" name="locale" value='["en_US"]'>
+	<label>all</label>
+	<input type="text" name="all" value='true'>
+	<input type="submit">
+	<input type="submit" onclick="location.href='wp-update-check.json'; return false;" value="Sample JSON results">
+</form>
+
+<h2>ARR Matey! Update Check - Method 2 (WP Plugin Update Server)</h2>
+<form method="get" action="https://wcoctest.kinsta.com/wp-update-server/">
+	<pre>URL: https://wcoctest.kinsta.com/wp-update-server/</pre>
+	<label>update_action</label>
+	<input name="update_action" value="get_metadata">
+	<label>plugin_id</label>
+	<input name="plugin_id" value="arrmatey/arrmatey.php">
+	<input type="submit">
+</form>
+
+<h2>ARR Matey! Update Check - Method 4 (Mike's Way)</h2>
+<form method="get" action="http://updates.arrmatey.neutrinoinc.com/update.php">
+	<pre>URL: http://updates.arrmatey.neutrinoinc.com/update.php</pre>
+	<label>plugin</label>
+	<input name="plugin" value="arrmatey/arrmatey.php">
+	<input type="submit">
+</form>
+
+</body>
+</html>
