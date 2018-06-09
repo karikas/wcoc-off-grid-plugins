@@ -2,12 +2,13 @@
 
 This is a collection of the slideshow and resources referenced and provided during the "Off-Grid Plugins: Updates Outside of WordPress.org" presentation by [Mike Karikas](https://github.com/karikas).  Quick reference to the final plugin server can be found at [github.com/karikas/wordpress-remote-plugin-updates](https://github.com/karikas/wordpress-remote-plugin-updates).
 
-_An off-grid plugin is a plugin not stored on WordPress.org, but still hasall the neat features of one (updates, robust information, pictures, etc)_
+_An off-grid plugin is a plugin not stored on WordPress.org, but still has all the neat features of one (updates, robust information, pictures, etc)_
 
 Chances are pretty good that the remote server URLs will be offline within a week of this presentation.
 
 ```
 wcoc-off-grid-plugins
+│
 │   README.md                           This file
 │   WCOC 2018 - Off-Grid Plugins.pdf    Presentation slides in PDF format
 │   server-tests.html                   Static HTML page to ping different plugin update servers and see the results
